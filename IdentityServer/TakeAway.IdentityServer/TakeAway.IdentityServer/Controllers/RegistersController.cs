@@ -17,25 +17,28 @@ namespace TakeAway.IdentityServer.Controllers
         {
             _userManager = userManager;
         }
+
         [HttpPost]
         public async Task<IActionResult> UserRegister ( CreateUserRegisterDto createUserRegisterDto )
         {
             var values = new ApplicationUser()
             {
-                UserName = createUserRegisterDto.Username
-            ,
-                Email = createUserRegisterDto.Email
-            ,
-                Name = createUserRegisterDto.Name
-            ,
+                UserName = createUserRegisterDto.Username,
+                Email = createUserRegisterDto.Email,
+                Name = createUserRegisterDto.Name,
                 Surname = createUserRegisterDto.Surname,
             };
-            var result = await _userManager.CreateAsync(values, createUserRegisterDto.Password);
-            if (result.Succeeded) 
-            { 
-                return Ok("User Added Successfully");
+
+            {
+                var result = await _userManager.CreateAsync(values, createUserRegisterDto.Password);
+                if (result.Succeeded)
+                {
+                    return Ok("Başarıyla eklendi");
+                }
+
+                return Ok("Bir hata oluştu");
             }
-            return Ok("Something Went Wrong");
+
         }
 
     }
