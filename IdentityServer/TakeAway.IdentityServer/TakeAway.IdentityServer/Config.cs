@@ -10,7 +10,7 @@ namespace TakeAway.IdentityServer
 {
     public static class Config
     {
-        public static IEnumerable<ApiResource> apiResources => new ApiResource []
+        public static IEnumerable<ApiResource> ApiResources => new ApiResource []
         {
             new ApiResource("ResourceCatalog"){Scopes={"CatalogFullPermission"}},
             new ApiResource("ResourceCatalog2"){Scopes={"CatalogReadPermission"}},
