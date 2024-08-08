@@ -49,6 +49,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TakeAway.SignalR", "TakeAwa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAway.SignalR.Api", "TakeAway.SignalR\TakeAway.SignalR.Api\TakeAway.SignalR.Api.csproj", "{8ABDC370-0343-44DE-9CF6-1FDDD1E199B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAway.SignalR.WebUI", "TakeAway.SignalR\TakeAway.SignalR.WebUI\TakeAway.SignalR.WebUI.csproj", "{42B884D3-DF25-41D9-9CFD-6EC76CA914EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{8ABDC370-0343-44DE-9CF6-1FDDD1E199B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8ABDC370-0343-44DE-9CF6-1FDDD1E199B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8ABDC370-0343-44DE-9CF6-1FDDD1E199B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42B884D3-DF25-41D9-9CFD-6EC76CA914EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42B884D3-DF25-41D9-9CFD-6EC76CA914EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42B884D3-DF25-41D9-9CFD-6EC76CA914EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42B884D3-DF25-41D9-9CFD-6EC76CA914EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +121,7 @@ Global
 		{270F86E5-D0D7-43D3-8D27-A961E503E91A} = {F31D7C8F-5B19-4C7D-910A-0D1F90D44B81}
 		{C8DECF5D-C675-4EE4-8D4E-3F12DA122F4B} = {2BC959DE-81D2-4681-B7E6-EFF4085CEAC5}
 		{8ABDC370-0343-44DE-9CF6-1FDDD1E199B0} = {72B8EAAA-41CF-421A-B643-BF84245DB5C7}
+		{42B884D3-DF25-41D9-9CFD-6EC76CA914EF} = {72B8EAAA-41CF-421A-B643-BF84245DB5C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0195689E-F7CF-4B35-A3E2-CD7E99E3B1C0}
