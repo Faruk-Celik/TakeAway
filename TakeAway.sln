@@ -45,11 +45,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeAway.IdentityServer", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeAway.Basket", "Services\Basket\TakeAway.Basket\TakeAway.Basket.csproj", "{C8DECF5D-C675-4EE4-8D4E-3F12DA122F4B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TakeAway.SignalR", "TakeAway.SignalR", "{72B8EAAA-41CF-421A-B643-BF84245DB5C7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TTakeAway.SignalR", "TTakeAway.SignalR", "{72B8EAAA-41CF-421A-B643-BF84245DB5C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAway.SignalR.Api", "TakeAway.SignalR\TakeAway.SignalR.Api\TakeAway.SignalR.Api.csproj", "{8ABDC370-0343-44DE-9CF6-1FDDD1E199B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeAway.SignalR.Api", "TakeAway.SignalR\TakeAway.SignalR.Api\TakeAway.SignalR.Api.csproj", "{8ABDC370-0343-44DE-9CF6-1FDDD1E199B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakeAway.SignalR.WebUI", "TakeAway.SignalR\TakeAway.SignalR.WebUI\TakeAway.SignalR.WebUI.csproj", "{42B884D3-DF25-41D9-9CFD-6EC76CA914EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TakeAway.SignalR.WebUI", "TakeAway.SignalR\TakeAway.SignalR.WebUI\TakeAway.SignalR.WebUI.csproj", "{42B884D3-DF25-41D9-9CFD-6EC76CA914EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TakeAway.SignalR", "TakeAway.SignalR", "{721E97EF-0E2E-487F-A41F-B532283EE4CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
