@@ -31,6 +31,7 @@ namespace TakeAway.IdentityServer.Controllers
                 GetCheckAppUserViewModel model = new GetCheckAppUserViewModel();
                 model.Username = loginDto.Username;
                 model.Id = user.Id;
+                
                 var token = JwtTokenGenerator.GenerateToken(model);
 
                 return Ok(token);

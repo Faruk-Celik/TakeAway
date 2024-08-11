@@ -4,7 +4,7 @@
     {
         public int DeliveryId { get; set; }
         public string Status { get; set; }
-        public string TotalPrice { get; set; }
+        public decimal TotalPrice { get; set; }
         public string District { get; set; }
         public string City { get; set; }
 
