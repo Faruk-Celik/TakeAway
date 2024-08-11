@@ -14,7 +14,7 @@ namespace TakeAway.WebUI.ViewComponents.ProductViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync ()
         {
-          var values = await _productService.GetAllProductsAsync ();
+            var values = await _productService.GetAllProductsAsync();
             return View(values);
         }
 

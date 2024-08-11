@@ -33,10 +33,10 @@ namespace TakeAway.IdentityServer.Controllers
                 var result = await _userManager.CreateAsync(values, createUserRegisterDto.Password);
                 if (result.Succeeded)
                 {
-                    return Ok("Başarıyla eklendi");
+                    return Ok("New User Added Successfully");
                 }
 
-                return Ok("Bir hata oluştu");
+                return Ok("An Error Occurred");
             }
 
         }

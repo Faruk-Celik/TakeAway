@@ -14,7 +14,7 @@ namespace TakeAway.WebUI.Services.ProductServices
 
         public async Task<List<ResultProductDto>> GetAllProductsAsync ()
         {
-            var responseMesage = await _httpClient.GetAsync("https://localhost:6001/api/Product");
+            var responseMesage = await _httpClient.GetAsync("http://localhost:6001/api/Product");
 
             var jsonData = await responseMesage.Content.ReadAsStringAsync();
             var values = JsonConvert.DeserializeObject<List<ResultProductDto>>(jsonData);
