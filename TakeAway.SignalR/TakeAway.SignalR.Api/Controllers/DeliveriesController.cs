@@ -67,13 +67,13 @@ namespace TakeAway.SignalR.Api.Controllers
             int values = _context.Deliveries.Where(x => x.Status == "Order Delivered").Count();
             return Ok(values);
         }
-        // totalprice is decimal and take away signalr webui is not able to convert it to string
-        //[HttpGet("GetTotalPrice")]
-        //public IActionResult GetTotalPrice ( int id )
-        //{
-        //    decimal value = _context.Deliveries.Sum(x => x.TotalPrice);
-        //    return Ok(value);
-        //}
+        
+        [HttpGet("GetTotalPrice")]
+        public IActionResult GetTotalPrice ( int id )
+        {
+            decimal value = _context.Deliveries.Sum(x => x.TotalPrice);
+            return Ok(value);
+        }
 
         [HttpGet("GetTotalDelivery")]
         public IActionResult GetTotalDelivery ( int id )
