@@ -17,9 +17,24 @@
                             $("#constatus").text(connection.state);
                             connection.start().then(() => {
                                 $("#constatus").text(connection.state);
+                                
+                                setInterval(() => {
+                                    connection.invoke("SentStatistic")
+                                }, 1000);
+
                             }).catch((err) => {
                                 console.log(err);
                             });
+                            connection.on("ReceiveStatusOnWayCount", (value1) => {
+                                $("#onwaycount").text(value1);
+                            });
+                            connection.on("ReceiveStatusTotalPrice", (value2) => {
+                                $("#totalpricecount").text(value2);
+                            });
+                            connection.on("ReceiveStatusTotalDelivery", (value3) => {
+                                $("#totaldeliverycount").text(value3);
+                            });
+                            
                         });
                     </script>
                 </div>
@@ -30,6 +45,9 @@
 }
 <div class="col-md-8 offset-2">
     <div class="alert alert-primary"> Connection Status: <strong id="constatus"></strong> </div>
+    <div class="alert alert-primary"> On Way Count: <strong id="onwaycount"></strong> </div>
+    <div class="alert alert-primary"> Total Price Count: <strong id="totalpricecount"></strong> </div>
+    <div class="alert alert-primary"> Total Delivery Count: <strong id="totaldeliverycount"></strong> </div> 
 </div>
 
 
