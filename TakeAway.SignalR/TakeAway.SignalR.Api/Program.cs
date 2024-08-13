@@ -1,4 +1,5 @@
 using TakeAway.SignalR.Api.DAL;
+using TakeAway.SignalR.Api.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,8 @@ builder.Services.AddCors(opt =>
         .AllowCredentials();
     });
 });
+
+builder.Services.AddSignalR(); // Add this line to register SignalR services
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -38,5 +41,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHub<SignalRHub>("/signalrhub");
 
 app.Run();

@@ -1,24 +1,35 @@
 ﻿@{
     ViewData ["Title"] = "Index";
 }
+@section Scripts {
 
-<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
 
-<div class="container">
-    <br />
-    <br />
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <script type="text/javascript">
-                    $(document).ready(() => {
-                        var connection = new signalR.HubConnectionBuilder().withURL("https://localhost:7039/api");
-                    });
-                </script>
+    <div class="container">
+        <br />
+        <br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <script type="text/javascript">
+                        $(document).ready(() => {
+                            var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7039/signalrhub").build();
+                            $("#constatus").text(connection.state);
+                            connection.start().then(() => {
+                                $("#constatus").text(connection.state);
+                            }).catch((err) => {
+                                console.log(err);
+                            });
+                        });
+                    </script>
+                </div>
             </div>
         </div>
     </div>
 
+}
+<div class="col-md-8 offset-2">
+    <div class="alert alert-primary"> Connection Status: <strong id="constatus"></strong> </div>
 </div>
 
 
