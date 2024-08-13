@@ -1,11 +1,24 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    ViewData ["Title"] = "Index";
 }
 
-<h1>Index</h1>
-<h1>@ViewBag.v1</h1>
-<h1>@ViewBag.v2</h1>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
 
+<div class="container">
+    <br />
+    <br />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <script type="text/javascript">
+                    $(document).ready(() => {
+                        var connection = new signalR.HubConnectionBuilder().withURL("https://localhost:7039/api");
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 
